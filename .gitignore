@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+*.pyc
+# solutions, exams and slides never go in this public repo
+*solution*
+*corrige*
+examen/
