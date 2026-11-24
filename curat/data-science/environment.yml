@@ -1,0 +1,41 @@
+# Environnement du cours
+# "Data Sciences, visualisation et Big Data" (M2 Teledetection et SIG)
+# Installation : conda env create -f environment.yml
+#                conda activate geodatasciences
+# conda installe seulement Python ; pip installe les paquets (roues
+# binaires), ce qui evite les longues resolutions de dependances.
+name: geodatasciences
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - numpy
+      - pandas
+      - matplotlib
+      - seaborn
+      - plotly
+      - jupyterlab
+      - requests
+      # Geospatial
+      - geopandas
+      - pyogrio
+      - pyarrow
+      - shapely
+      - pyproj
+      - rasterio
+      - rioxarray
+      - folium
+      - mapclassify
+      # Cubes de donnees et Big Data
+      - xarray
+      - dask[complete]
+      - zarr
+      - netCDF4
+      - pystac-client
+      - odc-stac
+      # Apprentissage automatique
+      - scikit-learn
+      # Diagrammes d'incertitude (KOUADIO, paquet k-diagram)
+      - k-diagram

@@ -21,6 +21,7 @@ The first cell of each notebook fetches its data: from `../data` if you have the
 |---|---|---|
 | INP-HB | IC1 · Fondations du Machine Learning (20 h) | [`inphb/ic1`](inphb/ic1) |
 | IUGB | CSC 2301 · Principles of Computer Programming (in English) | [`iugb/csc2301`](iugb/csc2301) |
+| CURAT | Data Sciences, visualisation et Big Data (M2, 20 h) | [`curat/data-science`](curat/data-science) |
 
 ## Pour l'enseignant / For the instructor
 
