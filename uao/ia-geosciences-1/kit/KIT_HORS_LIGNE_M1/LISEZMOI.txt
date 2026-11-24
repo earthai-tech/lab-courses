@@ -1,0 +1,77 @@
+KIT HORS LIGNE - TD/TP IA & GEOSCIENCES (MASTER 1)
+====================================================
+
+Contenu du dossier
+------------------
+  M1_TD_TP_enonces.ipynb          notebook des étudiants
+  forages_socle_synthetique.csv   données (le notebook les trouve tout seul)
+  LANCER_JUPYTER.bat              double-clic : ouvre Jupyter dans le navigateur
+  VERIFIER.bat                    double-clic : vérifie que tout est installé
+  verifier_installation.py        script utilisé par VERIFIER.bat
+  (la version corrigée reste chez l'enseignant)
+
+Le navigateur sert seulement d'affichage : AUCUNE connexion Internet n'est
+nécessaire une fois Python installé.
+
+
+ÉTAPE 1 - AVANT LE COURS (enseignant, avec Internet, une seule fois)
+--------------------------------------------------------------------
+Télécharger UN des deux outils et le copier sur une clé USB (8 Go conseillé) :
+
+  Option A - WinPython (RECOMMANDÉ en salle : portable, sans installation,
+             sans droits administrateur)
+      https://winpython.github.io  ->  version 64 bits "Python 3.11/3.12"
+      (prendre la version complète, pas "dot" : elle contient déjà pandas,
+       scikit-learn, matplotlib, seaborn et Jupyter)
+      Le fichier .exe s'extrait en un dossier WPy64-xxxx : placer ce dossier
+      DANS ce kit (à côté de LANCER_JUPYTER.bat).
+
+  Option B - Anaconda (installation classique sur chaque PC, ~1 Go,
+             contient tout le nécessaire)
+      https://www.anaconda.com/download  ->  installeur Windows 64 bits
+      Copier l'installeur .exe sur la clé à côté de ce kit.
+
+Puis copier tout ce dossier KIT_HORS_LIGNE_M1 sur la clé USB.
+Tester une fois sur un PC : double-clic sur VERIFIER.bat -> "Tout est prêt".
+
+
+ÉTAPE 2 - DANS LA SALLE (sans Internet)
+---------------------------------------
+Avec WinPython (option A) :
+  1. Copier le dossier KIT_HORS_LIGNE_M1 de la clé vers le Bureau du PC
+     (ou travailler directement depuis la clé, plus lent).
+  2. Double-clic sur VERIFIER.bat  ->  "Tout est prêt".
+  3. Double-clic sur LANCER_JUPYTER.bat  ->  le navigateur s'ouvre sur Jupyter.
+  4. Cliquer sur M1_TD_TP_enonces.ipynb, puis exécuter la 1re cellule.
+
+Avec Anaconda (option B) :
+  1. Lancer l'installeur depuis la clé (« Just Me », options par défaut ;
+     l'installation fonctionne sans Internet, environ 10 minutes).
+  2. Copier le dossier KIT_HORS_LIGNE_M1 sur le Bureau.
+  3. Double-clic sur VERIFIER.bat, puis sur LANCER_JUPYTER.bat.
+     (ou : menu Démarrer > Anaconda Navigator > Jupyter Notebook)
+
+
+ÉTAPE 3 - PENDANT ET APRÈS LA SÉANCE
+------------------------------------
+  - Enregistrer souvent : Ctrl + S (le fichier .ipynb du dossier est modifié).
+  - Ne pas fermer la fenêtre noire tant que Jupyter est utilisé.
+  - Pour rendre le travail : copier le fichier .ipynb sur la clé ou le
+    renommer NOM_Prenom_seanceX.ipynb.
+  - Si les cellules ne marchent plus après une pause :
+    menu Kernel > Restart & Run All (tout réexécuter dans l'ordre).
+
+
+DÉPANNAGE
+---------
+  "Python introuvable"      -> WinPython n'est pas dans ce dossier, ou Anaconda
+                               n'est pas installé.
+  "[MANQUANT] seaborn"      -> version WinPython "dot" : prendre la version
+                               complète, ou avec Anaconda :  conda install seaborn
+  Le navigateur ne s'ouvre pas -> copier dans le navigateur l'adresse
+                               http://localhost:8888/... affichée dans la
+                               fenêtre noire.
+  Antivirus qui bloque le .bat -> lancer à la main :
+                               python -m notebook   (dans le dossier du kit)
+  PC trop lent / peu de PC  -> travailler en binômes ; l'enseignant projette
+                               la version corrigée.
