@@ -2,7 +2,10 @@
 __pycache__/
 .DS_Store
 *.pyc
-# solutions, exams and slides never go in this public repo
+# solutions, answer keys and slides never go in this public repo;
+# exam folders too, except a sat exam paper published on purpose (listed below)
 *solution*
 *corrige*
 examen/
+!uao/ia-geosciences-1/examen/
+
