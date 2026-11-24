@@ -20,6 +20,10 @@ The first cell of each notebook fetches its data: from `../data` if you have the
 | Institution | Cours | Dossier |
 |---|---|---|
 | INP-HB | IC1 · Fondations du Machine Learning (20 h) | [`inphb/ic1`](inphb/ic1) |
+| INP-HB | PREPA IC · Mathématiques pour l'IA (20 h) | [`inphb/prepa`](inphb/prepa) |
+| INP-HB | TS · L'IA sur le terrain (20 h) | [`inphb/ts`](inphb/ts) |
+| INP-HB | IC2 · Modélisation avancée (20 h) | [`inphb/ic2`](inphb/ic2) |
+| INP-HB | IC3 · Conception de systèmes d'IA (20 h) | [`inphb/ic3`](inphb/ic3) |
 | IUGB | CSC 2301 · Principles of Computer Programming (in English) | [`iugb/csc2301`](iugb/csc2301) |
 | CURAT | Data Sciences, visualisation et Big Data (M2, 20 h) | [`curat/data-science`](curat/data-science) |
 | UAO | IA appliquée aux géosciences (I) · Master 1 (20 h) | [`uao/ia-geosciences-1`](uao/ia-geosciences-1) |
