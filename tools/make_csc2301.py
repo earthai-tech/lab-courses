@@ -1,6 +1,7 @@
-# Builds IUGB CSC 2301 (Principles of Computer Programming) week 1:
-# the synthetic drill-hole dataset, the starter notebook and its Otter-Grader tests.
-# Re-running it overwrites iugb/csc2301/{data,notebooks,tests}/ for week 1.
+# Builds IUGB CSC 2301 (Principles of Computer Programming) lab notebooks:
+# the synthetic datasets, the notebooks and their Otter-Grader tests.
+# Week 1 is built here; later weeks live in tools/csc2301_w*.py and reuse these helpers.
+# Re-running it overwrites iugb/csc2301/{data,notebooks,tests}/.
 import csv, json, pprint, random, textwrap
 from pathlib import Path
 
@@ -64,9 +65,10 @@ TESTS = {
         (">>> bool(richest_hole == max(hole_means, key=hole_means.get))\nTrue", "richest_hole should be the hole_id with the highest mean in hole_means.")],
 }
 
-def write_tests():
-    d = R / 'tests' / 'w1'; d.mkdir(parents=True, exist_ok=True)
-    for q, cases in TESTS.items():
+def write_tests(week='w1', tests=None):
+    tests = TESTS if tests is None else tests
+    d = R / 'tests' / week; d.mkdir(parents=True, exist_ok=True)
+    for q, cases in tests.items():
         (d / f'{q}.py').write_text(test_file(q, cases), encoding='utf-8')
 
 # ---------------------------------------------------------------- notebook
@@ -320,8 +322,44 @@ def notebook():
     (R / 'notebooks').mkdir(parents=True, exist_ok=True)
     (R / 'notebooks' / NB).write_text(json.dumps(nb, ensure_ascii=False, indent=1) + "\n", encoding='utf-8')
 
+def setup_cell(week, data_files, tests):
+    files = [("data/" + d, d) for d in data_files] + [(f"tests/{week}/{q}.py", f"tests/{q}.py") for q in tests]
+    return code(f'''
+    # Setup: run this cell first (Colab or local Jupyter).
+    # It fetches the data and the answer checks: from the repository (../data, ../tests)
+    # if you downloaded it, otherwise from GitHub.
+    import os, shutil, urllib.request
+    URL = '{REPO_RAW}'
+    FILES = {files!r}
+    os.makedirs('tests', exist_ok=True)
+    for source, target in FILES:
+        if os.path.exists(target):
+            continue
+        local = os.path.join('..', source)
+        if os.path.exists(local):
+            shutil.copy(local, target)                      # offline kit / cloned repo
+        else:
+            urllib.request.urlretrieve(URL + source, target)  # Colab: download
+    print('Ready:', ', '.join(t for _, t in FILES))
+    ''')
+
+def save_notebook(name, prefix, cells):
+    nb = {"cells": cells, "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+                                        "language_info": {"name": "python"}, "colab": {"provenance": []}},
+          "nbformat": 4, "nbformat_minor": 5}
+    for i, c in enumerate(nb["cells"]):
+        c["id"] = f"{prefix}-{i:02d}"
+    (R / 'notebooks').mkdir(parents=True, exist_ok=True)
+    (R / 'notebooks' / name).write_text(json.dumps(nb, ensure_ascii=False, indent=1) + "\n", encoding='utf-8')
+
 if __name__ == '__main__':
+    import importlib.util, sys
     rows = make_data()
     write_tests()
     notebook()
     print(len(rows), 'intervals;', NB, 'written')
+    sys.modules.setdefault('make_csc2301', sys.modules[__name__])
+    for extra in sorted(Path(__file__).parent.glob('csc2301_w*.py')):
+        spec = importlib.util.spec_from_file_location(extra.stem, extra)
+        mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+        print(mod.build())
