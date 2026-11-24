@@ -23,6 +23,14 @@ Un seul notebook accompagne tout le cours : [`M1_TD_TP_enonces.ipynb`](notebooks
 | [`forages_socle_synthetique.csv`](data/forages_socle_synthetique.csv) | 320 forages synthétiques : position, zone, lithologie, profondeur, altération, résistivité, paramètres géoélectriques (sfi, magnitude, power, ohmic_area) et débit (m³/h). Contient volontairement des erreurs à nettoyer (séance 2). |
 | [`forages_socle_propre.csv`](data/forages_socle_propre.csv) | Le même jeu après nettoyage, pour reprendre à la séance 3. |
 
+## Examen final 2025-2026
+
+Épreuve écrite de 1 h 30, sans ordinateur : une partie commune (QCM, 10 points) et un problème selon le parcours (Pédologie, Géomatériaux ou Géomarines, 10 points). La première promotion de Master 2 l'a passée sur le programme de ce cours ; c'est l'examen de référence du Master 1.
+
+- Sujet : [`Examen_final_2025-2026_sujet.pdf`](examen/Examen_final_2025-2026_sujet.pdf)
+- Données des trois problèmes, pour s'entraîner sur ordinateur : [`examen/donnees`](examen/donnees) (classification et régression pour chaque parcours, 1 200 échantillons chacun)
+- Le corrigé est sur la page du cours, après saisie du code de classe.
+
 ## Travailler
 
 - **Google Colab** (recommandé) : cliquez sur le badge *Ouvrir dans Colab* en haut du notebook. La première cellule télécharge les données toute seule. Pour garder votre travail : *Fichier → Enregistrer une copie dans Drive*.
