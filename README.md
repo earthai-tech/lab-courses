@@ -25,6 +25,7 @@ The first cell of each notebook fetches its data: from `../data` if you have the
 | INP-HB | IC2 · Modélisation avancée (20 h) | [`inphb/ic2`](inphb/ic2) |
 | INP-HB | IC3 · Conception de systèmes d'IA (20 h) | [`inphb/ic3`](inphb/ic3) |
 | IUGB | CSC 2301 · Principles of Computer Programming (in English) | [`iugb/csc2301`](iugb/csc2301) |
+| IUGB | MEN 4338 · Geostatistics, lecture & lab (in English) | [`iugb/men4338`](iugb/men4338) |
 | CURAT | Data Sciences, visualisation et Big Data (M2, 20 h) | [`curat/data-science`](curat/data-science) |
 | UAO | IA appliquée aux géosciences (I) · Master 1 (20 h) | [`uao/ia-geosciences-1`](uao/ia-geosciences-1) |
 | UAO | IA appliquée aux géosciences (II) · Master 2 (20 h) | [`uao/ia-geosciences-2`](uao/ia-geosciences-2) |
@@ -39,6 +40,6 @@ Re-running it overwrites the notebooks of that course, including exercises added
 
 ### Exercices vérifiés automatiquement / Auto-checked exercises
 
-IC1 S1 and S2 end with short exercises checked by [Otter-Grader](https://otter-grader.readthedocs.io): students run `grader.check("q1")` and see at once which answers pass. Tests live in `inphb/ic1/tests/<session>/` and recompute the expected answer from the student's own variables, so no answer is written in the test files. `tools/add_ic1_checks.py` generates both. IUGB CSC 2301 week 1 works the same way (`tools/make_csc2301.py`).
+IC1 S1 and S2 end with short exercises checked by [Otter-Grader](https://otter-grader.readthedocs.io): students run `grader.check("q1")` and see at once which answers pass. Tests live in `inphb/ic1/tests/<session>/` and recompute the expected answer from the student's own variables, so no answer is written in the test files. `tools/add_ic1_checks.py` generates both. IUGB CSC 2301 week 1 works the same way (`tools/make_csc2301.py`), and so do all 14 weeks of IUGB MEN 4338 (`tools/make_men4338.py`).
 These checks are for practice; graded tests with hidden cases belong in a private repository.
 Solutions and answer keys do **not** belong in this public repository (an exam paper may, once it has been sat).
