@@ -19,8 +19,7 @@ Course page (slides after sign-in with your `@iugb.edu.ci` email): **https://www
 | 11 | Modules: writing your own toolbox | [`CSC2301_W11_modules_geotools.ipynb`](notebooks/CSC2301_W11_modules_geotools.ipynb) · [Open in Colab](https://colab.research.google.com/github/earthai-tech/lab-courses/blob/main/iugb/csc2301/notebooks/CSC2301_W11_modules_geotools.ipynb) | `block_model_pit1.csv` |
 | 12 | Algorithms: searching, sorting and interpolation | [`CSC2301_W12_algorithms_search_interp.ipynb`](notebooks/CSC2301_W12_algorithms_search_interp.ipynb) · [Open in Colab](https://colab.research.google.com/github/earthai-tech/lab-courses/blob/main/iugb/csc2301/notebooks/CSC2301_W12_algorithms_search_interp.ipynb) | `temperature_survey_gt1.csv` (synthetic, 20 stations), `well_log_kw2.csv` |
 | 13 | Monte Carlo simulation: uncertainty in oil in place | [`CSC2301_W13_monte_carlo_stoiip.ipynb`](notebooks/CSC2301_W13_monte_carlo_stoiip.ipynb) · [Open in Colab](https://colab.research.google.com/github/earthai-tech/lab-courses/blob/main/iugb/csc2301/notebooks/CSC2301_W13_monte_carlo_stoiip.ipynb) | none: the inputs are probability distributions |
-
-Week 14 is the final project and presentation.
+| 14 | Final project and presentation: evaluating well KW-3 | [`CSC2301_W14_final_project_kw3.ipynb`](notebooks/CSC2301_W14_final_project_kw3.ipynb) · [Open in Colab](https://colab.research.google.com/github/earthai-tech/lab-courses/blob/main/iugb/csc2301/notebooks/CSC2301_W14_final_project_kw3.ipynb) | `well_log_kw3.csv` (synthetic GR, RHOB, RT with null values, 521 samples) |
 
 Each notebook ends with exercises checked by Otter-Grader: run `grader.check("q1")` under your answer.
 The checks recompute the expected result from the data, so the answers are not written in `tests/`.
