@@ -1,0 +1,56 @@
+ASSAY REPORT - BATCH 2024-117 - FIRE ASSAY AU (50 g)
+Laboratory: example assay lab     Client: student exploration project
+sample ; hole ; from-to (m) ; Au ; remark
+------------------------------------------------------------
+S0001;dh 02 ;0.0-1.5;0.87;duplicate OK
+S0002 ;DH-02 ;1.5-3.0 ;2,29 g/t ;
+S0003;  DH02; 3.0-4.5; 0.42; RE-ASSAY
+S0004; dh 02 ; 4.5-5.5; 1.56; 
+S0005 ;DH-02 ;5.5-6.5 ;0,91 g/t ;
+S0006 ;DH-02 ;6.5-8.5 ;0,18 g/t ;low recovery
+S0007 ; DH02 ;8.5-10.0 ;0.55 ;duplicate OK
+S0008; DH-02; 10.0-12.0; n.d.; low recovery
+S0009 ;dh 02  ;12.0-14.0 ;<0.01 ;RE-ASSAY
+S0010;DH-02;14.0-16.0;<0.01;
+S0011; DH-02; 16.0-18.0; 1,26 g/t; RE-ASSAY
+S0012 ;DH-02 ;18.0-19.5 ;2.65 ;low recovery
+S0013 ;DH-02 ;19.5-20.5 ;1.30 ;low recovery
+
+S0014; DH-03; 0.0-1.5; 2,49 g/t; 
+S0015; DH-03; 1.5-3.5; 0.28; 
+S0016;DH-03;3.5-4.5;0,91 g/t;
+S0017 ;dh-03 ;4.5-5.5 ;1.41 ;low recovery
+S0018 ; DH03 ;5.5-7.0 ;0.25 ;
+S0019 ;dh-03 ;7.0-9.0 ;0.46 ;RE-ASSAY
+S0020; dh 03 ; 9.0-10.0; 0,18 g/t; duplicate OK
+S0021 ; dh-03 ; 10.0-11.0 ; 2,53 g/t ; 
+S0022; dh-03; 11.0-12.5; 0,80 g/t; low recovery
+S0023;DH-03;12.5-14.5;1,06 g/t;
+
+S0024 ;  DH05 ; 0.0-1.0 ; <0.01 ; duplicate OK
+S0025; dh 05 ; 1.0-2.0; 0.80; 
+S0026 ;dh 05  ;2.0-4.0 ;1.00 ;
+S0027 ; dh-05 ; 4.0-6.0 ; 1.70 ; low recovery
+S0028 ;DH-05 ;6.0-7.5 ;2,33 g/t ;
+S0029 ;  DH05 ; 7.5-9.5 ; 0,51 g/t ; RE-ASSAY
+S0030 ;DH-05 ;9.5-11.0 ;n.d. ;
+S0031; DH05;11.0-12.0;1,19 g/t;
+S0032; dh 05 ; 12.0-13.0; n.d.; 
+S0033 ; DH-05 ; 13.0-14.5 ; 1,20 g/t ; 
+S0034 ; DH-05 ; 14.5-15.5 ; 0,23 g/t ; 
+
+S0035;  DH07; 0.0-1.0; 1.60; 
+S0036 ; dh 07  ; 1.0-2.0 ; 1.43 ; 
+S0037; DH-07; 2.0-3.0; 0,16 g/t; low recovery
+S0038 ;DH-07 ;3.0-4.5 ;3,40 g/t ;
+S0039; dh 07 ; 4.5-6.5; 0.18; 
+S0040 ;dh-07 ;6.5-7.5 ;n.d. ;
+S0041 ;  DH07 ; 7.5-8.5 ; 0.29 ; RE-ASSAY
+S0042; DH07;8.5-9.5;0.91;
+S0043; dh-07; 9.5-10.5; <0.01; 
+S0044 ;DH-07 ;10.5-12.5 ;0,55 g/t ;duplicate OK
+S0045 ;DH-07 ;12.5-14.5 ;0.39 ;low recovery
+
+------------------------------------------------------------
+n.d. = not determined (sample lost). <0.01 = below detection limit.
+END OF REPORT

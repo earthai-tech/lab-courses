@@ -343,6 +343,42 @@ def setup_cell(week, data_files, tests):
     print('Ready:', ', '.join(t for _, t in FILES))
     ''')
 
+def otter_cell():
+    return code('''
+    # Automatic answer checks (Otter-Grader)
+    try:
+        import otter
+    except ImportError:
+        %pip install -q otter-grader
+        import otter
+    grader = otter.Notebook(tests_dir="tests")
+    ''')
+
+def header(week, title, nb, intro):
+    """Title cell shared by weeks 3 and later: Colab badge, course line, then the week's intro."""
+    badge = (f"[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]"
+             f"(https://colab.research.google.com/github/earthai-tech/lab-courses/blob/main/iugb/csc2301/notebooks/{nb})")
+    return {"cell_type": "markdown", "metadata": {}, "source": "\n\n".join([
+        f"# CSC 2301 · Week {week} — {title}", badge,
+        "**IUGB · BSc Mining / Petroleum Engineering** · Instructor: Laurent Kouadio",
+        textwrap.dedent(intro).strip("\n"),
+        "Run each cell with **Shift + Enter**, from top to bottom, starting with the two setup cells."])}
+
+def question(q, text, starter):
+    """Exercise markdown, a starter cell and its check."""
+    return [md(text), code(starter), code(f'grader.check("{q}")')]
+
+def closing(going_further):
+    tail = ("---\n**Before you leave:** run all the checks with the cell below, then save your notebook\n"
+            "(**File → Download → .ipynb** in Colab).")
+    return [{"cell_type": "markdown", "metadata": {}, "source": textwrap.dedent(going_further).strip("\n") + "\n\n" + tail},
+            code('grader.check_all()')]
+
+def write_csv(name, rows):
+    (R / 'data').mkdir(parents=True, exist_ok=True)
+    with open(R / 'data' / name, 'w', newline='', encoding='utf-8') as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
+
 def save_notebook(name, prefix, cells):
     nb = {"cells": cells, "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
                                         "language_info": {"name": "python"}, "colab": {"provenance": []}},
